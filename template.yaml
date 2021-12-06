@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  MyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: training-java
+      CodeUri: target/lambda-1.jar
+      Handler: in.java8.WelcomeLambda::handleRequest
+      Runtime: java11
